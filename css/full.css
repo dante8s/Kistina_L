@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #D7CCC8; 
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #BCAAA4; 
+    box-shadow: 0rem .5rem 1rem rgba(0,0,0,0.8);
+    z-index: 2000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.3rem;
+}
+
+.logo__link {
+    display: flex;
+    width: 170px;
+    height: auto;
+}
+
+.nav-items {
+    display: flex;
+    margin-right: auto; /* Розташувати елементи зліва */
+}
+
+.nav-items li {
+    list-style: none;
+    margin: 0rem 1rem;
+}
+
+.nav-items li a {
+    text-decoration: none;
+    color: #5D4037; 
+    font-size: 1.3rem;
+    transition: .5s;
+}
+
+.nav-items li a:hover {
+    color: #3E2723; 
+}
+
+.nav-button {
+    display: none;
+    cursor: pointer;
+    margin-right: 15px; /* Відступ справа */
+}
+
+.bar, .bar1, .bar2 {
+    width: 3rem;
+    height: 0.5rem;
+    background-color: #A1887F; 
+    margin: 0.3rem;
+    border-radius: 0.5rem;
+    transition: .3s;
+}
+
+.change .bar {
+    transform: translate(0, 0.7rem) rotate(-45deg);
+}
+
+.change .bar1 {
+    opacity: 0;
+    width: 0;
+}
+
+.change .bar2 {
+    transform: translate(0, -0.9rem) rotate(45deg);
+}
+
+/* Адаптивність */
+@media screen and (max-width: 600px) {
+    .nav-items {
+        position: fixed;
+        left: 0;
+        margin-top: 5rem;
+        width: 100%;
+        flex-direction: column;
+        background-color: #BCAAA4; 
+        align-items: center;
+        padding-top: 10rem;
+        transform: translateX(100%);
+        transition: .5s;
+        padding: 0;
+    }
+
+    .nav-items.hide-show {
+        transform: translateX(0%);
+    }
+
+    .nav-items li {
+        margin: 1.5rem 0rem;
+    }
+
+    .nav-items li a {
+        display: block;
+    }
+
+    .nav-button {
+        display: block; /* Відображати бургер на маленьких екранах */
+    }
+}
+
+
+/* Футер завжди внизу */
+.footer {
+    background-color: #BCAAA4; 
+    color: #5D4037; 
+    padding: 10px 0;
+     /* Додає автоматичне вирівнювання для футера */
+    margin-top: 0px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1000px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+    text-align: center;
+}
+
+.footer-column p,
+.footer-column a {
+    color: #5D4037; 
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.footer-column a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-column a i {
+    margin-right: 8px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #8D6E63; 
+    padding: 10px 0;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.emsoc {
+    margin-bottom: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+    font-size: 1.2rem; 
+}
+
